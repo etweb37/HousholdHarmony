@@ -974,17 +974,55 @@ const Shape: any = styled('img')({
   top: `10px`,
 });
 
-const Field: any = styled('div')({
-  backgroundColor: `rgba(0, 0, 0, 0.2)`,
-  backdropFilter: `blur(25px)`,
-  WebkitBackdropFilter: `blur(25px)`,
-  borderRadius: `17px`,
+const InputField: any = styled('div')(({ theme }: any) => ({
+  backgroundColor: `rgba(255, 255, 255, 1)`,
+  border: `1px solid rgba(170, 170, 170, 1)`,
+  boxSizing: `border-box`,
+  borderRadius: `16px`,
+  display: `flex`,
+  position: `absolute`,
+  isolation: `isolate`,
+  flexDirection: `row`,
+  justifyContent: `flex-start`,
+  alignItems: `flex-start`,
+  padding: `0px`,
   width: `320px`,
   height: `40px`,
-  position: `absolute`,
   left: `16px`,
   top: `19px`,
+}));
+
+const Frame283: any = styled('div')({
+  borderRadius: `0px`,
+  display: `flex`,
+  position: `absolute`,
+  isolation: `isolate`,
+  flexDirection: `column`,
+  justifyContent: `flex-start`,
+  alignItems: `flex-start`,
+  padding: `0px`,
+  boxSizing: `border-box`,
+  alignSelf: `stretch`,
+  width: `358px`,
+  left: `16px`,
+  top: `12px`,
 });
+
+const InputType: any = styled('div')(({ theme }: any) => ({
+  textAlign: `left`,
+  whiteSpace: `pre-wrap`,
+  fontSynthesis: `none`,
+  color: `rgba(13, 14, 15, 1)`,
+  fontStyle: `normal`,
+  fontFamily: `Wells Fargo Sans`,
+  fontWeight: `400`,
+  fontSize: `20px`,
+  letterSpacing: `0px`,
+  textDecoration: `none`,
+  lineHeight: `18px`,
+  textTransform: `none`,
+  margin: `0px`,
+}));
 
 function Chat(props: ChatProps): JSX.Element {
   return (
@@ -1094,7 +1132,11 @@ function Chat(props: ChatProps): JSX.Element {
             <Icon1 src={Icon1Image} loading="lazy" alt={'Icon'} />
             <Shape src={ShapeImage} loading="lazy" alt={'Shape'} />
           </Button1>
-          <Field></Field>
+          <InputField>
+            <Frame283>
+              <InputType>{`Input type`}</InputType>
+            </Frame283>
+          </InputField>
         </Input1>
       </Frame289474>
     </Chat1>
