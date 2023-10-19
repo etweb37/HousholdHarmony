@@ -28,3 +28,7 @@ export interface MainPanelThreadsAllBProps {
 export interface IPadPro129LandscapeProps {
   className?: any;
 }
+
+export interface Authentication1Props {
+  className?: any;
+}

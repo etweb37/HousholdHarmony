@@ -13,6 +13,7 @@
  **********************************************************************/
 
 import React from 'react';
+import { TextField } from '@mui/material';
 import VectorImage from 'src/assets/images/Chat_Vector.png';
 import Vector1Image from 'src/assets/images/Chat_Vector_1.png';
 import Vector2Image from 'src/assets/images/Chat_Vector_2.png';
@@ -974,55 +975,26 @@ const Shape: any = styled('img')({
   top: `10px`,
 });
 
-const InputField: any = styled('div')(({ theme }: any) => ({
-  backgroundColor: `rgba(255, 255, 255, 1)`,
-  border: `1px solid rgba(170, 170, 170, 1)`,
-  boxSizing: `border-box`,
-  borderRadius: `16px`,
-  display: `flex`,
-  position: `absolute`,
-  isolation: `isolate`,
-  flexDirection: `row`,
-  justifyContent: `flex-start`,
-  alignItems: `flex-start`,
-  padding: `0px`,
-  width: `320px`,
-  height: `40px`,
-  left: `16px`,
-  top: `19px`,
-}));
-
-const Frame283: any = styled('div')({
+const Input2: any = styled('div')({
   borderRadius: `0px`,
   display: `flex`,
   position: `absolute`,
   isolation: `isolate`,
   flexDirection: `column`,
-  justifyContent: `flex-start`,
+  justifyContent: `center`,
   alignItems: `flex-start`,
   padding: `0px`,
   boxSizing: `border-box`,
-  alignSelf: `stretch`,
-  width: `358px`,
-  left: `16px`,
-  top: `12px`,
+  width: `320px`,
+  height: `48px`,
+  left: `12px`,
+  top: `8px`,
 });
 
-const InputType: any = styled('div')(({ theme }: any) => ({
-  textAlign: `left`,
-  whiteSpace: `pre-wrap`,
-  fontSynthesis: `none`,
-  color: `rgba(13, 14, 15, 1)`,
-  fontStyle: `normal`,
-  fontFamily: `Wells Fargo Sans`,
-  fontWeight: `400`,
-  fontSize: `20px`,
-  letterSpacing: `0px`,
-  textDecoration: `none`,
-  lineHeight: `18px`,
-  textTransform: `none`,
+const TextFieldFilled: any = styled(TextField)({
+  alignSelf: `stretch`,
   margin: `0px`,
-}));
+});
 
 function Chat(props: ChatProps): JSX.Element {
   return (
@@ -1132,11 +1104,14 @@ function Chat(props: ChatProps): JSX.Element {
             <Icon1 src={Icon1Image} loading="lazy" alt={'Icon'} />
             <Shape src={ShapeImage} loading="lazy" alt={'Shape'} />
           </Button1>
-          <InputField>
-            <Frame283>
-              <InputType>{`Input type`}</InputType>
-            </Frame283>
-          </InputField>
+          <Input2>
+            <TextFieldFilled
+              variant="filled"
+              size="small"
+              label={`User Name`}
+              helperText="Helper text"
+            />
+          </Input2>
         </Input1>
       </Frame289474>
     </Chat1>

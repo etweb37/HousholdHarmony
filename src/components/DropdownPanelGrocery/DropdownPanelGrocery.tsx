@@ -13,11 +13,11 @@
  **********************************************************************/
 
 import React from 'react';
+import ArrowDown2PngImage from 'src/assets/images/DropdownPanelGrocery_arrow_down_2_png.png';
 import ShapeImage from 'src/assets/images/DropdownPanelGrocery_Shape.png';
 import PathImage from 'src/assets/images/DropdownPanelGrocery_Path.png';
 import Chart3Image from 'src/assets/images/DropdownPanelGrocery_Chart.png';
 import { styled } from '@mui/material/styles';
-import MagiconsGlyphArrowArrowDown2 from 'src/components/MagiconsGlyphArrowArrowDown2/MagiconsGlyphArrowArrowDown2';
 import MembersAdd from 'src/components/MembersAdd/MembersAdd';
 import AssetsSeparatorEmpty from 'src/components/AssetsSeparatorEmpty/AssetsSeparatorEmpty';
 import { DropdownPanelGroceryProps } from 'src/types';
@@ -96,13 +96,12 @@ const Grocery: any = styled('div')(({ theme }: any) => ({
   margin: `0px`,
 }));
 
-const MagiconsGlyphArrowAr: any = styled(MagiconsGlyphArrowArrowDown2)(
-  ({ theme }: any) => ({
-    width: `32px`,
-    height: `32px`,
-    margin: `0px`,
-  })
-);
+const ArrowDown2Png: any = styled('img')({
+  height: `32px`,
+  width: `32px`,
+  objectFit: `cover`,
+  margin: `0px`,
+});
 
 const BudgetProgress: any = styled('div')({
   borderRadius: `0px`,
@@ -707,7 +706,11 @@ function DropdownPanelGrocery(props: DropdownPanelGroceryProps): JSX.Element {
         <InputField>
           <Frame283>
             <Grocery>{`Grocery`}</Grocery>
-            <MagiconsGlyphArrowAr />
+            <ArrowDown2Png
+              src={ArrowDown2PngImage}
+              loading="lazy"
+              alt={'arrow-down-2.png'}
+            />
           </Frame283>
         </InputField>
       </BudgetDropdown>
