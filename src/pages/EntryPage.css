@@ -1,0 +1,8 @@
+#logo {
+    width: 4rem;
+    margin-inline: 1rem;
+}
+
+#main #container form:first-child {
+    margin: 2rem !important;
+}

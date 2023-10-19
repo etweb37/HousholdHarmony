@@ -1,0 +1,36 @@
+
+.message {
+    color: var(--ion-color-quaternary);
+    background-color: var(--ion-color-quaternary-contrast);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-block: 0.5rem;
+}
+
+.error {
+    color: var(--ion-color-danger);
+    padding: 1rem;
+}
+
+ion-list .message {
+    margin-left: 1rem;
+    margin-block: 1rem;
+    font-size: medium;
+}
+
+ion-footer > .message, ion-footer ion-toolbar .message {
+    margin: 0;
+    border-radius: 0;
+    padding: 1rem;
+    background-color: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+    .message {
+        background-color: var(--ion-color-quaternary-contrast);
+    }
+
+    .message.error {
+        background-color: var(--ion-background-color);
+    }
+}
