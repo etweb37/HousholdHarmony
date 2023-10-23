@@ -15,7 +15,7 @@
 import React from 'react';
 import { styled } from '@mui/material/styles';
 import MenuButton from 'src/components/MenuButton/MenuButton';
-import Container from 'src/components/Container/Container';
+import ContentContainer from 'src/components/ContentContainer/ContentContainer';
 import useLayout from 'src/components/Layout/useLayout';
 
 const Layout1 = styled('div')({
@@ -86,6 +86,11 @@ const MenuButton1 = styled(MenuButton)(({ theme }) => ({
   margin: `0px`,
 }));
 
+const MenuButton2 = styled(MenuButton)(({ theme }) => ({
+  height: `45px`,
+  margin: `10px 0px 0px 0px`,
+}));
+
 const Contentframe = styled('div')({
   backgroundColor: `rgba(245, 245, 245, 1)`,
   borderRadius: `0px`,
@@ -93,9 +98,9 @@ const Contentframe = styled('div')({
   position: `relative`,
   isolation: `isolate`,
   flexDirection: `column`,
-  justifyContent: `flex-start`,
-  alignItems: `flex-start`,
-  padding: `24px 0px`,
+  justifyContent: `center`,
+  alignItems: `center`,
+  padding: `0px`,
   boxSizing: `border-box`,
   alignSelf: `stretch`,
   flex: `1`,
@@ -103,7 +108,7 @@ const Contentframe = styled('div')({
   overflow: `hidden`,
 });
 
-const Container1 = styled(Container)(({ theme }) => ({
+const ContentContainer1 = styled(ContentContainer)(({ theme }) => ({
   alignSelf: `stretch`,
   flex: `1`,
   margin: `0px`,
@@ -118,10 +123,11 @@ function Layout(props) {
         <QuestTest>{'Test data'}</QuestTest>
         <Frame1>
           <MenuButton1 />
+          <MenuButton2 />
         </Frame1>
       </Menuframe>
       <Contentframe>
-        <Container1 />
+        <ContentContainer1 />
       </Contentframe>
     </Layout1>
   );
