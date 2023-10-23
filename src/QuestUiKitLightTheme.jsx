@@ -4,13 +4,13 @@ import { createTheme } from '@mui/material/styles';
 
 import SvgIcon from '@mui/material/SvgIcon';
 
-import { ReactComponent as IconAlert } from 'src//assets/images/_IconAlert_1.svg';
-import { ReactComponent as IconAlert1 } from 'src//assets/images/_IconAlert_1.svg';
-import { ReactComponent as IconInfo } from 'src//assets/images/_IconInfo.svg';
-import { ReactComponent as IconSuccess } from 'src//assets/images/_IconSuccess.svg';
-import { ReactComponent as IconUnchecked } from 'src//assets/images/_IconUnchecked.svg';
-import { ReactComponent as IconChecked } from 'src//assets/images/_IconChecked.svg';
-import { ReactComponent as IconMixed } from 'src//assets/images/_IconMixed.svg';
+import { ReactComponent as IconAlert } from 'src/assets/images/_IconAlert_1.svg';
+import { ReactComponent as IconAlert1 } from 'src/assets/images/_IconAlert_1.svg';
+import { ReactComponent as IconInfo } from 'src/assets/images/_IconInfo.svg';
+import { ReactComponent as IconSuccess } from 'src/assets/images/_IconSuccess.svg';
+import { ReactComponent as IconUnchecked } from 'src/assets/images/_IconUnchecked.svg';
+import { ReactComponent as IconChecked } from 'src/assets/images/_IconChecked.svg';
+import { ReactComponent as IconMixed } from 'src/assets/images/_IconMixed.svg';
 
 const lightGlobalTheme = createTheme({
   palette: {
