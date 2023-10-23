@@ -88,7 +88,7 @@ const MenuButton1 = styled(MenuButton)(({ theme }) => ({
 
 const MenuButton2 = styled(MenuButton)(({ theme }) => ({
   height: `45px`,
-  margin: `10px 0px 0px 0px`,
+  margin: `23px 0px 0px 0px`,
 }));
 
 const Contentframe = styled('div')({
