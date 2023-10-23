@@ -22,11 +22,11 @@ const MenuButton1 = styled('div')({
   position: `relative`,
   isolation: `isolate`,
   flexDirection: `column`,
+  height: 'auto',
   justifyContent: `flex-start`,
   alignItems: `flex-start`,
   padding: `0px`,
   boxSizing: `border-box`,
-  height: 'auto',
   width: 'fit-content',
 });
 
@@ -38,20 +38,20 @@ const Background = styled('div')({
   flexDirection: `row`,
   justifyContent: `center`,
   alignItems: `center`,
-  padding: `10px 0px`,
+  padding: `12px 0px 10px 0px`,
   boxSizing: `border-box`,
   width: `280px`,
   margin: `0px`,
   overflow: `hidden`,
 });
 
-const ButtonText = styled('div')({
+const ButtonTitle = styled('div')({
   textAlign: `left`,
   whiteSpace: `pre-wrap`,
   fontSynthesis: `none`,
   color: `rgba(0, 0, 0, 1)`,
   fontStyle: `normal`,
-  fontFamily: `Montserrat`,
+  fontFamily: `Nobile`,
   fontWeight: `400`,
   fontSize: `24px`,
   letterSpacing: `0px`,
@@ -64,7 +64,7 @@ function MenuButton(props) {
   return (
     <MenuButton1 className={props.className}>
       <Background>
-        <ButtonText>{`Button Text`}</ButtonText>
+        <ButtonTitle>{`Button Title`}</ButtonTitle>
       </Background>
     </MenuButton1>
   );
