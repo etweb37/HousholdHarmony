@@ -64,7 +64,7 @@ function MenuButton(props) {
   return (
     <MenuButton1 className={props.className}>
       <Background>
-        <ButtonText>{'Menu Button Title'}</ButtonText>
+        <ButtonText>{`Button Text`}</ButtonText>
       </Background>
     </MenuButton1>
   );
