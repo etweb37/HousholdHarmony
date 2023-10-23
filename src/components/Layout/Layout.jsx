@@ -15,6 +15,7 @@
 import React from 'react';
 import { styled } from '@mui/material/styles';
 import MenuButton from 'src/components/MenuButton/MenuButton';
+import Container from 'src/components/Container/Container';
 import useLayout from 'src/components/Layout/useLayout';
 
 const Layout1 = styled('div')({
@@ -64,8 +65,25 @@ const QuestTest = styled('div')({
   margin: `0px`,
 });
 
-const MenuButton1 = styled(MenuButton)(({ theme }) => ({
+const Frame1 = styled('div')({
+  borderRadius: `0px`,
+  display: `flex`,
+  position: `relative`,
+  isolation: `isolate`,
+  flexDirection: `column`,
+  justifyContent: `flex-start`,
+  alignItems: `center`,
+  padding: `13px 0px`,
+  boxSizing: `border-box`,
+  alignSelf: `stretch`,
+  flex: `1`,
   margin: `63px 0px 0px 0px`,
+  overflow: `hidden`,
+});
+
+const MenuButton1 = styled(MenuButton)(({ theme }) => ({
+  height: `45px`,
+  margin: `0px`,
 }));
 
 const Contentframe = styled('div')({
@@ -74,25 +92,37 @@ const Contentframe = styled('div')({
   display: `flex`,
   position: `relative`,
   isolation: `isolate`,
-  flexDirection: `row`,
+  flexDirection: `column`,
   justifyContent: `flex-start`,
   alignItems: `flex-start`,
+  padding: `24px 0px`,
+  boxSizing: `border-box`,
   alignSelf: `stretch`,
   flex: `1`,
   margin: `0px 0px 0px 10px`,
   overflow: `hidden`,
 });
 
+const Container1 = styled(Container)(({ theme }) => ({
+  alignSelf: `stretch`,
+  flex: `1`,
+  margin: `0px`,
+}));
+
 function Layout(props) {
-  const { data } = useLayout();
+  const { data } = useLayout(props);
 
   return (
     <Layout1 className={props.className}>
       <Menuframe>
         <QuestTest>{'Test data'}</QuestTest>
-        <MenuButton1 />
+        <Frame1>
+          <MenuButton1 />
+        </Frame1>
       </Menuframe>
-      <Contentframe></Contentframe>
+      <Contentframe>
+        <Container1 />
+      </Contentframe>
     </Layout1>
   );
 }
