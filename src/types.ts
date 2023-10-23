@@ -13,6 +13,10 @@
  *
  **********************************************************************/
 
+export interface LandscapeProps {
+  className?: any;
+}
+
 export interface SampleCardProps {
   className?: any;
   metadata: any;
@@ -51,10 +55,6 @@ export interface ShopBtn1Props {
 }
 
 export interface CardProps {
-  className?: any;
-}
-
-export interface LandscapeProps {
   className?: any;
 }
 
